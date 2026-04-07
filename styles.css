@@ -1,0 +1,122 @@
+:root {
+  --bg: #0f1115;
+  --panel: #181b22;
+  --panel-2: #212530;
+  --text: #e9edf5;
+  --accent: #66f2a7;
+  --warn: #f2a766;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  padding: 1rem;
+}
+
+header {
+  margin-bottom: 1rem;
+}
+
+h1, h2 {
+  margin: 0.2rem 0;
+}
+
+.transport,
+section {
+  background: var(--panel);
+  border: 1px solid #2c3240;
+  border-radius: 12px;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.transport {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+button {
+  border: none;
+  background: var(--panel-2);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+}
+
+button:hover {
+  outline: 1px solid var(--accent);
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 100px repeat(4, 1fr);
+  gap: 0.4rem;
+}
+
+.scenes,
+.mixer,
+.sequencer {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.track-label {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.clip {
+  background: #2a3040;
+  border: 1px solid #39445b;
+  border-radius: 8px;
+  padding: 0.4rem;
+  min-height: 40px;
+}
+
+.clip.active {
+  background: #1c5942;
+  border-color: var(--accent);
+}
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.step {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: #2f3648;
+  border: 1px solid #4d5a77;
+}
+
+.step.on {
+  background: var(--warn);
+}
+
+.step.playhead {
+  outline: 2px solid var(--accent);
+}
+
+small {
+  opacity: 0.8;
+}
