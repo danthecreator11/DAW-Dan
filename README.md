@@ -44,3 +44,18 @@ No build tools required.
 - AUv3/VST equivalent plugin strategy (native app phase)
 - Project save/load
 - Better timing strategy with look-ahead scheduler and worker thread
+
+## Stress testing
+
+You can run a headless scheduler stress test in Node.js:
+
+```bash
+node stress-test.js
+```
+
+What it does:
+- Simulates clip/pattern scheduling across progressively heavier sessions
+- Measures elapsed runtime for each scenario
+- Performs basic assertions to catch logic regressions
+
+> Note: this validates sequencing logic and scalability characteristics, not browser-specific audio rendering behavior.
