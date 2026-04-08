@@ -19,6 +19,18 @@ No build tools required.
 3. Trigger clips or launch scenes.
 4. Use mixer controls for each track.
 
+### URL
+
+There is **no public hosted URL** yet.
+
+Use one of these local URLs:
+- `file:///workspace/DAW-Dan/index.html` (open file directly)
+- `http://localhost:8080` after running:
+
+```bash
+python -m http.server 8080
+```
+
 ## Included v0.1 features
 
 - 4 tracks: Kick, Snare, Hat, Bass
